@@ -2,6 +2,7 @@
 /*Navbar management*/
 const menu_trigger = document.querySelector(".menu_trigger");
 const nav = document.querySelector("nav");
+const header = document.querySelector("header");
 
 menu_trigger.addEventListener("click", ChangeIconNavBarControl);
 document.addEventListener("click", closeMenuOnClickOutside);
@@ -15,11 +16,13 @@ function ChangeIconNavBarControl(e){
         menu_trigger.classList.add("menu_trigger_unactive");
         nav.classList.add("nav_menu_active");
         menu_trigger.classList.remove("menu_trigger_active");
+        header.classList.remove("no-scroll-x"); // Masque le dépassement horizontal
     }
     else{
         menu_trigger.classList.add("menu_trigger_active");
         nav.classList.remove("nav_menu_active");
         menu_trigger.classList.remove("menu_trigger_unactive");
+        header.classList.add("no-scroll-x"); // Rétablit le dépassement horizontal
     }
     e.stopPropagation()
 }
@@ -32,6 +35,7 @@ function closeMenuOnClickOutside(e) {
             menu_trigger.classList.add("menu_trigger_active");
             nav.classList.remove("nav_menu_active");
             menu_trigger.classList.remove("menu_trigger_unactive");
+            header.classList.add("no-scroll-x"); // Rétablit le dépassement horizontal
         }
     }
 }
