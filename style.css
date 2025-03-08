@@ -1141,7 +1141,7 @@ footer{
 
 
 /*Responsive Navbar*/
-@media screen and(maw-width: 900px){
+@media screen and(max-width: 900px){
     /*Gère les transitions une fois le breakpoint passé*/
     .nav_transition{
         transition: transform 0.8s ease-in;
