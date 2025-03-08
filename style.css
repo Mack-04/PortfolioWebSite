@@ -865,7 +865,7 @@ footer{
 /*-------------------------------------------------  Responsive Fonts-Sizes ------------------------------------------------*/
 
 /* Media Queries pour Tablette */
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     h1 {
         font-size: var(--h1-size-tablet);
         margin-bottom: var(--h1-margin-bottom-tablet);
@@ -1007,7 +1007,7 @@ footer{
 }
 
 /* Media Queries pour Mobile */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     h1 {
         font-size: var(--h1-size-mobile);
         margin-bottom: var(--h1-margin-bottom-mobile);
@@ -1141,7 +1141,7 @@ footer{
 
 
 /*Responsive Navbar*/
-@media screen and(max-width: 900px){
+@media (max-width: 900px){
     /*Gère les transitions une fois le breakpoint passé*/
     .nav_transition{
         transition: transform 0.8s ease-in;
